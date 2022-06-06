@@ -10,7 +10,7 @@ while True:
   event, values = janela.read()
   if event == 'cancelar' or event == sg.WIN_CLOSED:
     break
-  elif event == 'baixar':
+  elif event == 'Baixar':
     video = YouTube(values[0])
     video.streams.get_highest_resolution().download(output_path=values[1])
     sg.popup_ok("Download Concluido com Exito")
